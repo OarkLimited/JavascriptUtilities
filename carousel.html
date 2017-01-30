@@ -4,8 +4,93 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="row no-gutters home-products" style="height:30%;">
 
+    </div>
+
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/tether/dist/js/tether.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/template.js"></script>
+    <script src="/carousel.js"></script>
+    <script>
+        var $element = $(".home-products"),
+            instance = $element.data('carousel') || $element.carousel({});
+
+
+        var items = [
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/200/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/203/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/201/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/202/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/204/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/205/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/206/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/207/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/208/?random"
+                                }
+                            },
+                            {
+                                template: '<div class="col-4"><img style="width:100%; height:auto;" src="{{image}}" /></div>',
+                                data: {
+                                    image: "https://unsplash.it/300/209/?random"
+                                }
+                            }
+        ];
+
+        instance.addItems(items);
+
+        setInterval(function () {
+            instance.next();
+        }, 5000);
+    </script>
 </body>
 </html>
